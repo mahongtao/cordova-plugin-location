@@ -1,3 +1,4 @@
+cordova.define("com-amap-location.Location", function(require, exports, module) {
 var exec = cordova.require('cordova/exec');
 module.exports = {
     getCurrentPosition: function(success, error, args) { 
@@ -10,9 +11,9 @@ module.exports = {
         exec(success, error, "Location", "watchPosition", []);
     },
 
-    clearWatch: function(pluginWatchId) {
+    clearWatch: function(success, error, args) {
        console.log('clearWatch'); 
-       exec(success, error, "Location", "clearWatch", [pluginWatchId]);
+       exec(success, error, "Location", "clearWatch", []);
     }
 };
-
+});

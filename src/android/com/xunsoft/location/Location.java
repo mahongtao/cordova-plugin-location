@@ -6,7 +6,9 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import android.util.Log;
+
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
@@ -96,7 +98,7 @@ public class Location extends CordovaPlugin {
 			//地图定位选项
 			AMapLocationClientOption mLocationOption=new AMapLocationClientOption();
 			mLocationOption.setOnceLocation(true); //单次
-			mLocationOption.setInterval(1000);
+			mLocationOption.setInterval(2000);
 			mLocationOption.setNeedAddress(true);
 			mLocationOption.setHttpTimeOut(100000);
 			mLocationOption.setLocationMode(AMapLocationMode.Hight_Accuracy);
@@ -122,7 +124,7 @@ public class Location extends CordovaPlugin {
 			//地图定位选项
 			AMapLocationClientOption mLocationOption=new AMapLocationClientOption();
 			mLocationOption.setOnceLocation(false); //连续
-			mLocationOption.setInterval(1000);
+			mLocationOption.setInterval(2000);
 			mLocationOption.setNeedAddress(true);
 			mLocationOption.setHttpTimeOut(100000);
 			mLocationOption.setLocationMode(AMapLocationMode.Hight_Accuracy);
